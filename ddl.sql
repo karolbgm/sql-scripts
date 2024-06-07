@@ -48,3 +48,8 @@ FROM Assignments;
 SELECT * 
 FROM Students
 join Assignments on (Assignments.StudentId = Students.Id);
+
+SELECT a.*, concat(s.firstname, ' ', s.lastname) Name
+from Assignments a
+join Students s
+on s.Id = a.StudentId
